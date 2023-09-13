@@ -5,60 +5,83 @@ import {findAllByDisplayValue} from "@testing-library/react";
 
 // function declaration
 
-function hello(){
-    debugger
-    alert("Hello IT-Kamasutra")
+function hello() {
+    //debugger
+   // alert("Hello IT-Kamasutra")
 }
+
 hello();
 
 function App() {
-    debugger
+    console.log("App rendering")
+    //debugger
     return (
         <div>
-            This is APP component
+            <Rating />
+            <AppTitle />
+            <Rating/>
+            <Accordion/>
 
-            <Accordion />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
         </div>
 
     );
 }
+function AppTitle (){
+    console.log("AppTitle rendering")
+    return <>This is APP component</>
+}
 
-function Star(){
-    debugger
-    return(
-
+function Rating() {
+    console.log("Rating rendering")
+    //debugger
+    return (
+        <>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+        </>
+    );
+}
+function Star() {
+    console.log("Star rendering")
+    return (
         <div>Star</div>
     );
 }
-/*function Rating() {
-    debugger
+
+
+
+function Accordion() {
+    console.log("Accordion rendering")
+    //debugger
     return (
         <div>
-            <div>Star</div>
-            <div>Star</div>
-            <div>Star</div>
-            <div>Star</div>
-            <div>Star</div>
+        <AccordionTitle />
+        <AccordionBody />
         </div>
     );
 }
-*/
-    function Accordion(){
-        debugger
+
+function AccordionTitle (){
+    console.log("AccordionTitle rendering")
     return (
-<div>
-    <h3>Menu</h3>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-</div>
+        <div>
+            <h3>Menu</h3>
+        </div>
     );
-    }
+}
+function AccordionBody (){
+    console.log("AccordionBody rendering")
+    return  (
+        <div>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    )
+}
 export default App;
